@@ -349,4 +349,71 @@ iframe {
 .download-button i {
   font-size: 16px;
 }
+.hero {
+  margin-bottom: 30px;
+}
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.hero .highlight {
+  color: #3742fa;
+}
+.hero p {
+  font-size: 16px;
+  color: #555;
+}
+.dark-mode .hero p {
+  color: #ccc;
+}
+
+.motto {
+  font-style: italic;
+  color: #666;
+  margin: 20px 0 40px;
+  border-left: 4px solid #2ed573;
+  padding-left: 15px;
+}
+.dark-mode .motto {
+  color: #aaa;
+  border-color: #1dd1a1;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.info-card {
+  background-color: #f1f2f6;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 240px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+.info-card h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.info-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #3742fa;
+}
+.dark-mode .info-card {
+  background-color: #2f3640;
+  color: #dcdde1;
+}
+.dark-mode .info-card a {
+  color: #70a1ff;
+}
+
+.cta-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
