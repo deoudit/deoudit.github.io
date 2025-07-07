@@ -169,8 +169,10 @@ iframe {
 }
 .project-card h4 {
   margin-bottom: 10px;
-  color: #2f3542;
+  color: inherit;
+  font-weight: 600;
 }
+
 .project-card p {
   font-size: 14px;
   color: #555;
