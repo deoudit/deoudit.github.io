@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publications | Udit Deo</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    // Auto-detect dark mode preference
+    window.onload = function () {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-mode');
+      }
+    };
+  </script>
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <img src="assets/images/profile.jpg" class="profile-img" alt="Udit Deo">
+      <img src="assets/images/profile.jpg" class="profile-img" alt="Udit Deo" />
       <h1>Udit Deo</h1>
       <nav>
         <a href="index.html">Home</a>
@@ -18,8 +27,12 @@
         <a href="cv.html">Resume</a>
         <a href="projects.html">Projects</a>
       </nav>
+      <div class="toggle-wrapper">
+        <button onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+      </div>
     </aside>
 
+    <!-- Main Content -->
     <main class="main">
       <h2>Publications</h2>
       <ol>
@@ -39,10 +52,12 @@
       </ol>
 
       <h3>Patent</h3>
-      <p><strong>Title:</strong> A Device for Producing Electricity Using Roof Air Ventilator<br>
-      <strong>Design No.:</strong> 440258-001<br>
-      <strong>Granted by:</strong> IP India under the Designs Act, 2000<br>
-      <strong>Issue Date:</strong> 07 April 2025</p>
+      <p>
+        <strong>Title:</strong> A Device for Producing Electricity Using Roof Air Ventilator<br>
+        <strong>Design No.:</strong> 440258-001<br>
+        <strong>Granted by:</strong> IP India under the Designs Act, 2000<br>
+        <strong>Issue Date:</strong> 07 April 2025
+      </p>
     </main>
   </div>
 </body>
