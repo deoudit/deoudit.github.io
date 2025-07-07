@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Udit Deo</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script>
-    // Auto-detect system dark mode
     window.onload = function () {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark-mode');
@@ -37,27 +37,50 @@
       </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <main class="main">
       <h2>Projects</h2>
 
       <section class="projects">
-        <div class="project-card">
+        <!-- Project 1 -->
+        <a href="https://github.com/deoudit/fuzzy-optimizer" class="project-card color1" target="_blank">
+          <img src="assets/images/fuzzy.png" class="icon" alt="Fuzzy Icon" />
           <h4>Fuzzy Optimizer</h4>
-          <p>Framework for fuzzy relation inequality-based decision systems using weighted composition, ranked aggregation, and interpretable rules.</p>
-        </div>
-        <div class="project-card">
+          <p>Framework for fuzzy relation inequality-based decision systems with MCDA support and weighted rules.</p>
+          <div class="tags">
+            <span>Python</span><span>Fuzzy Logic</span><span>MCDA</span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://github.com/deoudit/license-detector" class="project-card color2" target="_blank">
+          <img src="assets/images/yolo.png" class="icon" alt="YOLO Icon" />
           <h4>Deep License Detector</h4>
-          <p>YOLOv3-powered vehicle license plate and axle detector with transfer learning. Achieved high accuracy with pre-trained MobileNet and ResNet.</p>
-        </div>
-        <div class="project-card">
+          <p>YOLOv3-based license plate and axle detector with transfer learning and synthetic augmentation.</p>
+          <div class="tags">
+            <span>YOLOv3</span><span>OpenCV</span><span>Transfer Learning</span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://github.com/deoudit/bc-checker" class="project-card color3" target="_blank">
+          <i class="fas fa-code icon"></i>
           <h4>Backward Compatibility Checker</h4>
-          <p>Python + Bash tool built at Amdocs to validate legacy billing module logic. Saved 90% QA effort by automating DB and config diffs.</p>
-        </div>
-        <div class="project-card">
+          <p>Python + Bash tool for testing legacy billing modules, automating regression testing in Amdocs.</p>
+          <div class="tags">
+            <span>Python</span><span>Shell</span><span>Automation</span>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="https://github.com/deoudit/qos-allocator" class="project-card color4" target="_blank">
+          <img src="assets/images/owa.png" class="icon" alt="OWA Icon" />
           <h4>Client-Server Quality Allocator</h4>
-          <p>Multi-objective optimization tool using OWA and fuzzy techniques to allocate priorities in distributed systems with minimal conflict.</p>
-        </div>
+          <p>Multi-objective optimizer using fuzzy OWA aggregation for distributed QoS allocation.</p>
+          <div class="tags">
+            <span>Fuzzy OWA</span><span>Optimization</span><span>QoS</span>
+          </div>
+        </a>
       </section>
     </main>
   </div>
