@@ -240,8 +240,11 @@ iframe {
 }
 .dark-mode .project-card {
   background-color: #353b48;
-  color: #dcdde1;
+  color: #e1e1e1;
   border-color: #444;
+}
+.dark-mode .project-card h4 {
+  color: #ffffff;
 }
 .dark-mode .project-card p {
   color: #aaa;
