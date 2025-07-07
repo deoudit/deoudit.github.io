@@ -491,3 +491,12 @@ iframe {
   color: #ffffff;
 }
 
+.main section h2 i,
+.main section h3 i {
+  color: #3742fa;
+}
+
+.dark-mode .main section h2 i,
+.dark-mode .main section h3 i {
+  color: #70a1ff;
+}
