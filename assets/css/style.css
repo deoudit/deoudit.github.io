@@ -321,3 +321,32 @@ iframe {
   font-size: 16px;
 }
 
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.download-button {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+}
+
+.download-button:hover {
+  background-color: #16a085;
+  color: white;
+}
+
+.download-button i {
+  font-size: 16px;
+}
+
