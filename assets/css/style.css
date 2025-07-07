@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   background-color: #f4f6f8;
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* === Layout Wrapper === */
@@ -30,6 +31,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: background 0.3s ease;
 }
 
 .profile-img {
@@ -81,11 +83,30 @@ body {
   text-decoration: underline;
 }
 
+/* === Toggle Button (Mobile + Dark Mode) === */
+.toggle-wrapper {
+  display: none;
+  margin-top: 15px;
+}
+.toggle-wrapper button {
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.toggle-wrapper button:hover {
+  background: #16a085;
+}
+
 /* === Main Content === */
 .main {
   flex: 1;
   padding: 40px;
   background-color: #ffffff;
+  transition: background 0.3s ease;
 }
 
 .main h2 {
@@ -126,6 +147,31 @@ iframe {
   width: 100%;
 }
 
+/* === Projects Grid === */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fafafa;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.project-card h4 {
+  margin-bottom: 10px;
+  color: #2f3542;
+}
+.project-card p {
+  font-size: 14px;
+  color: #555;
+}
+
 /* === Responsive Design === */
 @media (max-width: 768px) {
   body, .container {
@@ -138,26 +184,36 @@ iframe {
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+    flex-wrap: wrap;
   }
 
   .profile-img {
     width: 60px;
     height: 60px;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   .sidebar nav {
     display: flex;
     gap: 10px;
-    margin: 0;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main {
     padding: 20px;
   }
+
+  .toggle-wrapper {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
-/* === Optional Dark Mode Support === */
+/* === Dark Mode Support === */
 .dark-mode {
   background-color: #1e272e;
   color: #d2dae2;
@@ -175,4 +231,12 @@ iframe {
 .dark-mode .sidebar nav a:hover {
   background-color: #485460;
   color: #1abc9c;
+}
+.dark-mode .project-card {
+  background-color: #353b48;
+  color: #dcdde1;
+  border-color: #444;
+}
+.dark-mode .project-card p {
+  color: #aaa;
 }
