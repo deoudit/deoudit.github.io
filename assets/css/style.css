@@ -249,3 +249,46 @@ iframe {
 .dark-mode .project-card p {
   color: #aaa;
 }
+.project-card {
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.tags {
+  margin-top: 10px;
+}
+.tags span {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.dark-mode .tags span {
+  background-color: #444;
+  color: #ddd;
+}
