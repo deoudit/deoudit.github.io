@@ -349,6 +349,45 @@ iframe {
 .download-button i {
   font-size: 16px;
 }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #3742fa;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background-color: #2f3542;
+}
+
+.download-button {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+}
+
+.download-button:hover {
+  background-color: #16a085;
+  color: white;
+}
+
+.button i {
+  font-size: 16px;
+}
+
+
 .hero {
   margin-bottom: 30px;
 }
@@ -402,6 +441,31 @@ iframe {
   font-size: 14px;
   color: #3742fa;
 }
+.card-button {
+  display: inline-block;
+  background-color: #3742fa;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #2f3542;
+}
+
+.dark-mode .card-button {
+  background-color: #70a1ff;
+  color: #1e272e;
+}
+
+.dark-mode .card-button:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
 .dark-mode .info-card {
   background-color: #2f3640;
   color: #dcdde1;
