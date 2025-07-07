@@ -481,3 +481,13 @@ iframe {
   flex-wrap: wrap;
 }
 
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2f3542;
+}
+
+.dark-mode .hero h2 {
+  color: #ffffff;
+}
+
