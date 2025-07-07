@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Udit Deo • Home</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script>
-    // Auto-detect dark mode preference
     window.onload = function () {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark-mode');
@@ -32,38 +31,58 @@
         <button onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
       </div>
       <div class="contact">
-  <a href="mailto:uditdeo1670@gmail.com" class="contact-link">
-    <i class="fas fa-envelope"></i> Email Me
-  </a>
-  <a href="https://github.com/deoudit" class="contact-link" target="_blank">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-  <a href="https://linkedin.com/in/deoudit98" class="contact-link" target="_blank">
-    <i class="fab fa-linkedin"></i> Connect
-  </a>
-</div>
+        <a href="mailto:uditdeo1670@gmail.com" class="contact-link" title="uditdeo1670@gmail.com">
+          <i class="fas fa-envelope"></i> Udit’s Mail
+        </a>
+        <a href="https://github.com/deoudit" class="contact-link" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/deoudit98" class="contact-link" target="_blank">
+          <i class="fab fa-linkedin"></i> Connect
+        </a>
+      </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <main class="main">
-      <h2>Welcome</h2>
-      <p>
-  I’m a researcher in <strong>fuzzy optimization</strong>, <strong>multi-criteria decision systems</strong>, and <strong>interpretable AI</strong>.  
-  My work aims to bridge theoretical models with real-world problems by building intelligent, explainable, and robust systems.
-</p>
+      <!-- Hero Section -->
+      <section class="hero">
+        <h2>Hello, I’m <span class="highlight">Udit Deo</span></h2>
+        <p>A researcher passionate about <strong>fuzzy optimization</strong>, <strong>decision systems</strong>, and <strong>interpretable AI</strong>.</p>
+      </section>
 
-<p>
-  I’ve developed solutions in domains like <em>relation inequalities</em>, <em>computer vision</em>, and <em>automated testing</em>, combining formal logic with modern AI techniques.
-  I also actively publish and present research in IEEE and Springer conferences.
-</p>
+      <!-- Motto -->
+      <blockquote class="motto">
+        “Build systems that are not just smart, but also explainable and ethical.”
+      </blockquote>
 
-<p>
-  Feel free to explore my <a href="projects.html">projects</a>, <a href="publications.html">publications</a>, or download my <a href="cv.html">CV</a>.
-</p>
+      <!-- Cards Section -->
+      <section class="info-cards">
+        <div class="info-card">
+          <h4><i class="fas fa-flask"></i> Research</h4>
+          <p>Fuzzy logic, relation inequalities, decision modeling, deep learning, and soft computing.</p>
+          <a href="publications.html">View Publications</a>
+        </div>
 
+        <div class="info-card">
+          <h4><i class="fas fa-briefcase"></i> Industry</h4>
+          <p>Worked at Amdocs and Stackfusion on C++, Python, regression testing, and computer vision pipelines.</p>
+          <a href="bio.html#industry">View Experience</a>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fas fa-award"></i> Highlights</h4>
+          <p>Patent granted (2025), JRF in UGC-NET, top 0.05% nationally, GATE qualified multiple times.</p>
+          <a href="bio.html">More About Me</a>
+        </div>
+      </section>
+
+      <!-- CTA Buttons -->
+      <div class="cta-buttons">
+        <a href="projects.html" class="button">Explore Projects</a>
+        <a href="cv.html" class="button download-button"><i class="fas fa-download"></i> Download CV</a>
+      </div>
     </main>
   </div>
-
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
