@@ -90,10 +90,33 @@
   </a>
 </div>
 
-<p>
-  <img src="https://komarev.com/ghpvc/?username=deoudit&label=Visitors&color=0e75b6&style=flat" alt="visitor badge"/>
-</p>
 
+
+<style>
+.badge {
+  display:inline-flex; align-items:center; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size:14px; line-height:1; border-radius:4px; overflow:hidden; border:1px solid #d0d7de;
+}
+.badge .label { background:#555; color:#fff; padding:6px 8px; }
+.badge .count { background:#0e75b6; color:#fff; padding:6px 8px; min-width:48px; text-align:center; }
+</style>
+
+<div class="badge" id="visitors-badge">
+  <span class="label">Visitors</span>
+  <span class="count" id="visitors-count">—</span>
+</div>
+
+<script async>
+  // Increment and read the count (namespace: your domain, key: "visits")
+  fetch('https://api.countapi.xyz/update/deoudit.github.io/visits?amount=1')
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('visitors-count').textContent = d.value.toLocaleString();
+    })
+    .catch(() => {
+      document.getElementById('visitors-count').textContent = 'n/a';
+    });
+</script>
 
 
       
@@ -101,6 +124,7 @@
   </div>
 </body>
 </html>
+
 
 
 
