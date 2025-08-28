@@ -89,12 +89,12 @@
     <i class="fas fa-download"></i> Download CV
   </a>
 </div>
+
 <p>
   Visitors: <span id="visits">—</span>
 </p>
 <script async>
-  // Unique key: your domain, optionally add a path
-  fetch('https://api.countapi.xyz/hit/deoudit.github.io')
+  fetch('https://api.countapi.xyz/update/deoudit.github.io/visits/?amount=1')
     .then(r => r.json())
     .then(d => {
       document.getElementById('visits').textContent = d.value.toLocaleString();
@@ -103,11 +103,12 @@
       document.getElementById('visits').textContent = 'n/a';
     });
 </script>
-
+      
     </main>
   </div>
 </body>
 </html>
+
 
 
 
