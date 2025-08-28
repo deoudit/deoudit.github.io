@@ -90,24 +90,14 @@
   </a>
 </div>
 
-<p>
-  Visitors: <span id="visits">—</span>
-</p>
-<script async>
-  fetch('https://api.countapi.xyz/update/deoudit.github.io/visits/?amount=1')
-    .then(r => r.json())
-    .then(d => {
-      document.getElementById('visits').textContent = d.value.toLocaleString();
-    })
-    .catch(() => {
-      document.getElementById('visits').textContent = 'n/a';
-    });
-</script>
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdeoudit.github.io%2F&title=Visitors" alt="visitor badge">
+
       
     </main>
   </div>
 </body>
 </html>
+
 
 
 
