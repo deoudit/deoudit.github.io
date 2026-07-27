@@ -1,9 +1,7 @@
-// Dark mode: respect system preference, persist choice
 (function () {
-  const stored = localStorage.getItem('theme');
-  if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  var s = localStorage.getItem('theme');
+  if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches))
     document.body.classList.add('dark-mode');
-  }
 })();
 
 function toggleTheme() {
@@ -11,37 +9,23 @@ function toggleTheme() {
   localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 }
 
-// Mobile nav toggle
 function toggleNav() {
   document.getElementById('navLinks').classList.toggle('open');
 }
 
-// Close nav on link click (mobile)
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('#navLinks a').forEach(function (link) {
-    link.addEventListener('click', function () {
+  var path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('#navLinks a').forEach(function (a) {
+    if (a.getAttribute('href') === path) a.classList.add('active');
+    a.addEventListener('click', function () {
       document.getElementById('navLinks').classList.remove('open');
     });
   });
 
-  // Mark active nav link
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('#navLinks a').forEach(function (link) {
-    var href = link.getAttribute('href');
-    if (href === path) link.classList.add('active');
-  });
-
-  // Fade-up on scroll
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-up');
-        observer.unobserve(entry.target);
-      }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('fade-up'); obs.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
-
-  document.querySelectorAll('.section-block, .info-card, .project-card, .pub-list li').forEach(function (el) {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.section, .card, .pub-item').forEach(function (el) { obs.observe(el); });
 });
