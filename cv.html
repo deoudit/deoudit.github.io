@@ -3,75 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume | Udit Deo</title>
+  <title>Resume — Udit Deo</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script>
-    // Auto-detect system dark mode
-    window.onload = function () {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-      }
-    };
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="assets/images/profile.jpg" class="profile-img" alt="Udit Deo" />
-      <h1>Udit Deo</h1>
-      <nav>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">Udit Deo</a>
+      <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="bio.html">About</a>
         <a href="publications.html">Publications</a>
         <a href="cv.html">Resume</a>
-        <a href="projects.html">Projects</a>
       </nav>
-      <div class="toggle-wrapper">
-        <button onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+      <div style="display:flex;align-items:center;gap:4px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+        </button>
+        <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu"><i class="fas fa-bars"></i></button>
       </div>
-      <div class="contact">
-        <a href="mailto:uditdeo1670@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i> Udit’s Mail
-        </a>
-        <a href="https://github.com/deoudit" class="contact-link" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/deoudit98" class="contact-link" target="_blank">
-          <i class="fab fa-linkedin"></i> Connect
-        </a>
-        <a href="https://scholar.google.com/citations?user=uTstNTMAAAAJ&hl=en" class="contact-link" target="_blank">
-    <i class="fab fa-google"></i> Google Scholar
-  </a>
-      </div>
-    </aside>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="main">
-      <!-- Hero Section -->
-      <!-- Hero Section -->
-<section class="hero">
-  <h2><i class="fas fa-file-alt"></i> Resume</h2>
-  <p>Download my resume for an in-depth overview of my academic and industry work.</p>
-</section>
+  <div class="page">
 
+    <section class="hero">
+      <h2>Resume</h2>
+      <div class="hero-rule"></div>
+    </section>
 
-      <!-- Resume PDF Section -->
-      <section>
-        <iframe src="assets/github_profile_resume.pdf" width="100%" height="600" title="Udit Deo Resume"></iframe>
-      </section>
+    <div class="resume-frame">
+      <iframe src="assets/github_profile_resume.pdf" title="Udit Deo Resume"></iframe>
+    </div>
 
-      <!-- Download Button -->
-      <section>
-        <a href="assets/github_profile_resume.pdf" class="button download-button" download>
-          <i class="fas fa-download"></i> Download My Resume
-        </a>
-      </section>
-    </main>
+    <div class="buttons">
+      <a href="assets/github_profile_resume.pdf" class="btn btn-fill" download>
+        <i class="fas fa-download"></i> Download resume
+      </a>
+    </div>
+
   </div>
 
-  <script src="assets/js/main.js"></script>
+  <footer class="footer">&copy; 2025 Udit Deo</footer>
 </body>
 </html>
-

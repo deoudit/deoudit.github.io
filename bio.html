@@ -3,133 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Udit Deo</title>
+  <title>About — Udit Deo</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script>
-    window.onload = function () {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-      }
-    };
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="assets/images/profile.jpg" class="profile-img" alt="Udit Deo" />
-      <h1>Udit Deo</h1>
-      <nav>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">Udit Deo</a>
+      <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="bio.html">About</a>
         <a href="publications.html">Publications</a>
         <a href="cv.html">Resume</a>
-        <a href="projects.html">Projects</a>
       </nav>
-      <div class="toggle-wrapper">
-        <button onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+      <div style="display:flex;align-items:center;gap:4px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+        </button>
+        <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu"><i class="fas fa-bars"></i></button>
       </div>
-      <div class="contact">
-        <a href="mailto:uditdeo1670@gmail.com" class="contact-link" title="uditdeo1670@gmail.com">
-          <i class="fas fa-envelope"></i> Udit’s Mail
-        </a>
-        <a href="https://github.com/deoudit" class="contact-link" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/deoudit98" class="contact-link" target="_blank">
-          <i class="fab fa-linkedin"></i> Connect
-        </a>
-        <a href="https://scholar.google.com/citations?user=uTstNTMAAAAJ&hl=en" class="contact-link" target="_blank">
-    <i class="fab fa-google"></i> Google Scholar
-  </a>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <section class="hero">
+      <h2>About me</h2>
+      <div class="hero-rule"></div>
+      <p>
+        PhD scholar at IIT Roorkee with an M.Tech from MANIT Bhopal (9.53 GPA).
+        UGC-NET JRF awardee and dual GATE qualifier with two years of industry experience
+        at Amdocs and a granted design patent. My work bridges machine learning,
+        soft computing, and decision systems.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+      <ul class="compact-list">
+        <li>
+          <span class="title">PhD in Computer Science and Engineering</span>
+          <span class="meta">IIT Roorkee · 2025–Present</span>
+        </li>
+        <li>
+          <span class="title">M.Tech in Software Engineering</span>
+          <span class="meta">MANIT Bhopal · 2023–2025 · CGPA 9.53</span>
+        </li>
+        <li>
+          <span class="title">B.Tech in Computer Science and Engineering</span>
+          <span class="meta">SMVDU · 2017–2021 · CGPA 8.21</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h3><i class="fas fa-briefcase"></i> Experience</h3>
+      <ul class="compact-list">
+        <li>
+          <span class="title">Associate Software Engineer — Amdocs</span>
+          <span class="meta">Gurugram · Jul 2021 – Jun 2023</span>
+          <div class="detail">Built automation tools in C++ and Python for billing platforms; reduced manual QA effort by 90%.</div>
+        </li>
+        <li>
+          <span class="title">ML Intern — Stackfusion</span>
+          <span class="meta">Gurugram · May 2020 – Jul 2020</span>
+          <div class="detail">Fine-tuned YOLOv3, ResNet, and MobileNetSSD for vehicle detection pipelines.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="section">
+      <h3><i class="fas fa-flask"></i> Research interests</h3>
+      <div class="tags">
+        <span class="tag">Test-Time Adaptation</span>
+        <span class="tag">Diffusion Models</span>
+        <span class="tag">Domain Generalization</span>
+        <span class="tag">Robust Computer Vision</span>
+        <span class="tag">Multi-View Learning</span>
       </div>
-    </aside>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main">
-      <!-- Hero Section -->
-      <section class="hero">
-        <h2>About Me</h2>
-        <p>I am Udit Deo, a Computer Science researcher and technologist with a strong foundation in deep learning, computer vision, and fuzzy optimization. 
-          Currently pursuing a Ph.D. in Computer Science and Engineering at the Indian Institute of Technology Roorkee, I hold an M.Tech in Software Engineering 
-          from MANIT Bhopal (GPA: 9.53) and a B.Tech in Computer Science and Engineering. My research explores the intersection of machine learning, 
-          soft computing, and decision systems, with recent contributions published in IEEE and Springer-indexed international conferences. 
-          I am a UGC-NET JRF awardee and a dual GATE qualifier (CS & DA), demonstrating a sustained commitment to academic excellence. Professionally, 
-          I bring two years of industry experience at Amdocs, where I developed automation tools and optimized software systems across billing platforms. 
-          I have also held research roles at ZHCET, AMU and Stackfusion, fine-tuning deep learning models for real-world applications. I am the co-inventor of 
-          a granted design patent for a novel energy device, and I remain driven by interdisciplinary innovation, rigorous inquiry, and impactful technology 
-          development.</p>
-      </section>
+    <!-- Credentials -->
+    <section class="section">
+      <h3><i class="fas fa-certificate"></i> Credentials</h3>
+      <ul class="compact-list">
+        <li>
+          <span class="title">UGC-NET (CS) — Junior Research Fellowship</span>
+          <span class="meta">December 2024</span>
+        </li>
+        <li>
+          <span class="title">GATE CS (2022, 2025) · GATE DA (2025)</span>
+          <span class="meta">Qualified</span>
+        </li>
+        <li>
+          <span class="title">M.Tech thesis defended</span>
+          <span class="meta">30 June 2025 · Advisors: Prof. MMS Beg &amp; Dr. JK Jain</span>
+        </li>
+      </ul>
+    </section>
 
-      <!-- Education -->
-      <section>
-        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-        <ul>
-          <li><strong>PhD in Compurter Science and Engineering</strong>, IIT Roorkee (2025–Present)</li>
-          <li><strong>M.Tech in Software Engineering</strong>, MANIT Bhopal (2023–2025) — CGPA: 9.53</li>
-          <li><strong>B.Tech in Computer Science and Engineering</strong>, SMVDU[GFTI] (2017–2021) — CGPA: 8.21</li>
-        </ul>
-      </section>
-
-      <!-- Industry -->
-      <section id="industry">
-        <h3><i class="fas fa-briefcase"></i> Industry Experience</h3>
-        <ul>
-          <li>
-            <strong>Associate Software Engineer</strong> — Amdocs, Gurugram <em>(Jul 2021 – Jun 2023)</em><br />
-            • Developed tools in C/C++ and Python for billing modules (BFENV, ODI, Splitter, Archive) in Unix environments.<br />
-            • Built a Python-based backward compatibility checker — reduced manual QA effort by 90%.<br />
-            • Created a database comparator and merger utility; designed a Flask-based regression testing system.<br />
-            • Recognized for innovation, code quality, and process optimization.
-          </li>
-          <li>
-            <strong>Machine Learning Intern</strong> — Stackfusion, Gurugram <em>(May 2020 – Jul 2020)</em><br />
-            • Fine-tuned deep learning models (YOLOv3, ResNet, MobileNetSSD) for vehicle axle/license plate detection.<br />
-            • Automated data preprocessing with Python — improved label quality and dataset diversity.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Research Interests -->
-      <section>
-        <h3><i class="fas fa-flask"></i> Research Interests</h3>
-        <ul>
-          <li>Test-Time Adaptation</li>
-          <li>Diffusion Models</li>
-          <li>Domain Generalization</li>
-          <li>Robust Computer Vision</li>
-          <li>Multi-View Learning</li>
-        </ul>
-      </section>
-
-      <!-- Exams -->
-      <section>
-        <h3><i class="fas fa-certificate"></i> Exams Qualified</h3>
-        <ul>
-          <li>UGC-NET (CS) – JRF (Dec 2024)</li>
-          <li>GATE (CS, 2022 & 2025) | GATE (DA, 2025)</li>
-        </ul>
-      </section>
-
-      <!-- Thesis -->
-      <section>
-        <h3><i class="fas fa-book"></i> MTech Thesis</h3>
-        <p>
-          <strong>Title:</strong> Bridging Fuzziness and Optimization: Frameworks for Relation Inequalities and Multi-Criteria Decision Systems<br />
-          <strong>Status:</strong> Successfully defended on 30 June 2025<br />
-          <strong>Advisors:</strong> Prof. MMS Beg (ZHCET, AMU) and Dr. JK Jain (MANIT Bhopal)
-        </p>
-      </section>
-    </main>
   </div>
+
+  <footer class="footer">&copy; 2025 Udit Deo</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-

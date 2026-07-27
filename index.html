@@ -3,127 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Udit Deo • Home</title>
+  <title>Udit Deo — Researcher &amp; Engineer</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script>
-    window.onload = function () {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-      }
-    };
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="assets/images/profile.jpg" class="profile-img" alt="Udit Deo" />
-      <h1>Udit Deo</h1>
-      <nav>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">Udit Deo</a>
+      <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="bio.html">About</a>
         <a href="publications.html">Publications</a>
         <a href="cv.html">Resume</a>
-        <a href="projects.html">Projects</a>
       </nav>
-      <div class="toggle-wrapper">
-        <button onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+      <div style="display:flex;align-items:center;gap:4px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+        </button>
+        <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu"><i class="fas fa-bars"></i></button>
       </div>
-      <div class="contact">
-        <a href="mailto:uditdeo1670@gmail.com" class="contact-link" title="uditdeo1670@gmail.com">
-          <i class="fas fa-envelope"></i> Udit’s Mail
-        </a>
-        <a href="https://github.com/deoudit" class="contact-link" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/deoudit98" class="contact-link" target="_blank">
-          <i class="fab fa-linkedin"></i> Connect
-        </a>
-        <a href="https://scholar.google.com/citations?user=uTstNTMAAAAJ&hl=en" class="contact-link" target="_blank">
-    <i class="fab fa-google"></i> Google Scholar
-  </a>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <section class="hero">
+      <div class="hero-row">
+        <div class="hero-text">
+          <h1>Researcher, builder, thinker.</h1>
+          <div class="hero-rule"></div>
+          <p>AI researcher at IIT Roorkee working at the intersection of fuzzy optimization, decision systems, and deep learning.</p>
+          <div class="socials">
+            <a href="mailto:uditdeo1670@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://github.com/deoudit" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/deoudit98" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=uTstNTMAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+          </div>
+        </div>
+        <img src="assets/images/profile.jpg" class="profile-img" alt="Udit Deo" />
       </div>
-    </aside>
+    </section>
 
-    <!-- Main -->
-    <main class="main">
-      <!-- Hero Section -->
-      <section class="hero">
-        <h2>Hello, I’m <span class="highlight">Udit Deo</span></h2>
-        <p>Passionate researcher in <strong>AI</strong>, blending <strong>fuzzy optimization</strong>, <strong>decision systems</strong>, and <strong>deep learning</strong> for smarter <strong>vision</strong> and <strong>interpretability</strong>.</p>
-      </section>
+    <blockquote class="motto">
+      "Build systems that are not just smart, but also explainable and ethical."
+    </blockquote>
 
-      <!-- Motto -->
-      <blockquote class="motto">
-        “Build systems that are not just smart, but also explainable and ethical.”
-      </blockquote>
+    <section class="cards">
+      <div class="card">
+        <h4><i class="fas fa-flask"></i> Research</h4>
+        <p>Computer vision, soft computing, and fuzzy optimization.</p>
+      </div>
+      <div class="card">
+        <h4><i class="fas fa-briefcase"></i> Industry</h4>
+        <p>2 years at Amdocs — C++, Python, automation.</p>
+      </div>
+      <div class="card">
+        <h4><i class="fas fa-award"></i> Highlights</h4>
+        <p>UGC-JRF, GATE CS &amp; DA, granted patent.</p>
+      </div>
+    </section>
 
-      <!-- Cards Section -->
-      <section class="info-cards">
-        <div class="info-card">
-          <h4><i class="fas fa-flask"></i> Research</h4>
-          <p>computer vision, machine learning, deep learning, and soft computing.</p>
-          <a href="publications.html" class="card-button">View Publications</a>
-        </div>
+    <div class="buttons">
+      <a href="publications.html" class="btn btn-fill"><i class="fas fa-book-open"></i> Publications</a>
+      <a href="cv.html" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+    </div>
 
-        <div class="info-card">
-          <h4><i class="fas fa-briefcase"></i> Industry</h4>
-          <p>Worked at Amdocs and Stackfusion on C++, Python, Databases, and Computer Vision Pipelines.</p>
-          <a href="bio.html#industry" class="card-button">View Experience</a>
-        </div>
+    <div class="badge">
+      <span class="label">Visitors</span>
+      <span class="count" id="visits">—</span>
+    </div>
+    <script async>
+      fetch('https://abacus.jasoncameron.dev/hit/deoudit.github.io/visits')
+        .then(function(r){return r.json()})
+        .then(function(d){document.getElementById('visits').textContent=d.value.toLocaleString()})
+        .catch(function(){document.getElementById('visits').textContent='n/a'});
+    </script>
 
-        <div class="info-card">
-          <h4><i class="fas fa-award"></i> Highlights</h4>
-          <p>UGC-JRF (087), GATE CS & DA qualified; Patent granted; M.Tech 2nd rank with Merit Certificate</p>
-          <a href="bio.html#exams" class="card-button">More About Me</a>
-        </div>
-      </section>
-
-      <!-- CTA Buttons -->
-      <div class="cta-buttons">
-  <a href="projects.html" class="button primary-button">
-    <i class="fas fa-folder-open"></i> Explore Projects
-  </a>
-  <a href="cv.html" class="button download-button">
-    <i class="fas fa-download"></i> Download CV
-  </a>
-</div>
-
-
-
-<style>
-.badge{display:inline-flex;align-items:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;font-size:14px;line-height:1;border-radius:4px;overflow:hidden;border:1px solid #d0d7de}
-.badge .label{background:#555;color:#fff;padding:6px 8px}
-.badge .count{background:#0e75b6;color:#fff;padding:6px 8px;min-width:48px;text-align:center}
-</style>
-
-<div class="badge"><span class="label">Visitors</span><span class="count" id="visits">—</span></div>
-
-<script async>
-fetch('https://abacus.jasoncameron.dev/hit/deoudit.github.io/visits')
-  .then(r => r.json())
-  .then(d => { document.getElementById('visits').textContent = d.value.toLocaleString(); })
-  .catch(() => { document.getElementById('visits').textContent = 'n/a'; });
-</script>
-
-
-
-      
-    </main>
   </div>
+
+  <footer class="footer">&copy; 2025 Udit Deo</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
